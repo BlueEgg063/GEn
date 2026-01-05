@@ -57,7 +57,7 @@ buffer* GEn_createBuffer(window* window){
         return buffer;
     }
 }
-
+// Enters a loop that keeps the window open until the user quits
 void GEn_hangLoop(){
     SDL_Event e;
     bool quit = false;
