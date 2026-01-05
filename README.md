@@ -1,16 +1,16 @@
 # GEn (Game Engine)
-A SDL wrapper/game engine that removes a lot of SDL's pains and makes it suitable for game dev!
+An SDL wrapper/game engine that makes it suitable for game dev!
 
 # Dependencies
 
-- `gcc`
+- `gcc`(this is just a wrapper for `clang` on macOS)
 - `SDL2`
 - `SDL2_Image`
 - `make`
-- `ar` (This comes with MacOS Commandline Tools and is included in binutils on Linux)
+- `ar` (This comes with macOS Commandline Tools and is included in binutils on Linux)
 
 ## On Linux:
-On Linux, you can install the dependencies with the included package managers. This is not an all inclusive list, so if you don't find your distro here, just Google it, but these are the most common distros.
+On Linux, you can install the dependencies with the included package managers. This is not an all-inclusive list, so if you don't find your distro here, just Google it, but these are the most common distros.
 ### Debian and Derivatives:
 `sudo apt install gcc libsdl2-dev libsdl2-image-dev make git binutils`
 
@@ -20,10 +20,10 @@ On Linux, you can install the dependencies with the included package managers. T
 ### Arch and Derivatives:
 `sudo pacman -S gcc sdl2 sdl2-image make git binutils`
 
-## On MacOS:
-MacOS does not come with a package manager pre-installed, so users have 2 options: [Homebrew](https://brew.sh) or [Macports](https://macports.org).
+## On macOS:
+macOS does not come with a package manager pre-installed, so users have 2 options: [Homebrew](https://brew.sh) or [Macports](https://macports.org).
 Homebrew is recommended, but MacPorts is a suitable alternative.  
-For both, you need Apple Command Line Development tools, which you can install with `xcode-select --install` and following the steps. This give you access to the clang compiler and other critical utilities pre-included with Linux systems that are necessary for the following steps
+For both, you need Apple Command Line Development tools, which you can install with `xcode-select --install` and following the steps. This gives you access to the clang compiler and other critical utilities pre-included with Linux systems that are necessary for the following steps
 ### Homebrew(Recommended):
 Open Terminal, then paste this command:  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`  
