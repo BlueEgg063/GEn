@@ -1,5 +1,6 @@
 #include <gen/window.h>
 #include <gen/tools.h>
+//GEn_init and GEn_quit are called automatically
 void __attribute__((destructor)) GEn_quit(){
     IMG_Quit();
     SDL_Quit();
@@ -14,6 +15,7 @@ int GEn_fillBuffer(SDL_Surface* buffer, uint32_t rgb){
         return 0;
         }
     }
+//must call this to see stuff everytime you add new things
 void GEn_updateScreen(SDL_Window* window){
 SDL_UpdateWindowSurface(window);
 return;
@@ -22,6 +24,7 @@ void __attribute__((constructor)) GEn_init(){
 SDL_Init(SDL_INIT_VIDEO);
 IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG);
 }
+//creates a window, and gives you a pointer to it, so call it as a definition to a variable(ex: 
 SDL_Window* GEn_createWindow(const char* name){
 SDL_Window* window = NULL;
     window = SDL_CreateWindow(
