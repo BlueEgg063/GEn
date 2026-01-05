@@ -24,8 +24,8 @@ void __attribute__((constructor)) GEn_init(){
 SDL_Init(SDL_INIT_VIDEO);
 IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG);
 }
-//creates a window, and gives you a pointer to it, so call it as a definition to a variable(ex: 
-SDL_Window* GEn_createWindow(const char* name){
+//creates a window, and gives you a pointer to it, so call it as a definition to a variable(ex: window* window = GEn_createWindow("main");)
+window* GEn_createWindow(const char* name){
 SDL_Window* window = NULL;
     window = SDL_CreateWindow(
     name,
@@ -43,7 +43,8 @@ SDL_Window* window = NULL;
         return window;
         }
     }
-SDL_Surface* GEn_createBuffer(SDL_Window* window){
+//creates a buffer for an already created window. also returns a pointer
+buffer* GEn_createBuffer(window* window){
     if (!window) return NULL;
     SDL_Surface* buffer;
     buffer = SDL_GetWindowSurface(window);
@@ -56,6 +57,7 @@ SDL_Surface* GEn_createBuffer(SDL_Window* window){
         return buffer;
     }
 }
+
 void GEn_hangLoop(){
     SDL_Event e;
     bool quit = false;
@@ -67,7 +69,8 @@ void GEn_hangLoop(){
     }
     return;
 }
-void GEn_destroyWindow(SDL_Window* window){
+//destroys any given window
+void GEn_destroyWindow(window* window){
     SDL_DestroyWindow(window);
     return;
 }
