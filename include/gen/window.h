@@ -6,16 +6,18 @@
 #include <string.h>
 #include <stdint.h>
 
+typedef window SDL_Window;
+typedef buffer SDL_Surface;
 // Initialize everything
 void GEn_init(void);
 
 // Creates an SDL window with the specified name
 // Returns a pointer to the SDL_Window or NULL on error
-SDL_Window* GEn_createWindow(const char* name);
+window* GEn_createWindow(const char* name);
 
 // Creates a buffer for the window’s surface
 // Returns a pointer to SDL_Surface or NULL on error
-SDL_Surface* GEn_createBuffer(SDL_Window* window);
+buffer* GEn_createBuffer(SDL_Window* window);
 
 // Fills the provided buffer with the given RGB color
 // Returns 0 on success, -1 on failure (invalid buffer or color)
