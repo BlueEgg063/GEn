@@ -6,8 +6,8 @@
 #include <string.h>
 #include <stdint.h>
 
-typedef window SDL_Window;
-typedef buffer SDL_Surface;
+typedef SDL_Window window;
+typedef SDL_Surface buffer;
 // Initialize everything
 void GEn_init(void);
 
