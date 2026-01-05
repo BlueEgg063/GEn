@@ -10,12 +10,12 @@ An SDL wrapper/game engine that makes it suitable for game dev!
 - `ar` (This comes with macOS Commandline Tools and is included in binutils on Linux)
 
 ## On Linux:
-On Linux, you can install the dependencies with the included package managers. This is not an all-inclusive list, so if you don't find your distro here, just Google it, but these are the most common distros.
+On Linux, you can install the dependencies with the included package managers. This is not an all-inclusive list, so you may not find your distro below; however, as long as you can install the dependencies(from an unlisted package manager or from source), everything should work.
 ### Debian and Derivatives:
 `sudo apt install gcc libsdl2-dev libsdl2-image-dev make git binutils`
 
 ### Fedora and Derivatives:
-`sudo dnf install gcc SDL2 SDL2-devel SDL2_Image make git binutils`
+`sudo dnf install gcc SDL2-devel SDL2_Image-devel make git binutils`
 
 ### Arch and Derivatives:
 `sudo pacman -S gcc sdl2 sdl2-image make git binutils`
